@@ -4,31 +4,62 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+/* logo size in nav */
 #logo{
     width: 200px;
-    height: 110px;
+    height: 108px;
 }
+/* home page background */
 #home{
     background:linear-gradient(180deg,grey,silver)
 }
+/* about page background */
+#about{
+    background:linear-gradient(90deg,grey,silver)
+}
+/* the logo in side nav */
 #logo-drop{
-
     width: 180px;
     height: auto;
 }
+/* main for all pages */
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+/* about container for about page */
+.container-about{
+    height: 62vh;
+    width: 400px;
+    font-size: 14px;
+}
+/* copyright in side nav */
 .foot-drop{
     position: absolute;
-    bottom: 1px;
+    bottom: 12px;
+    text-align: center;
+    right: 2.5em;
 }
+/* media queries */
 @media (max-width:300px) {
     h1 {
         position: relative;
         text-align: center;
+    }
+    p {
+        font-size: 11px;
+    }
+    .container-about {
+        height: 55vh;
+    }
+    .foot-drop{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 720px) {
+    .container-about {
+        height: 55vh;
     }
 }
