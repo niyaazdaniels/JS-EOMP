@@ -25,7 +25,7 @@
 <body id = "contact">
     <header>
         <!-- SideBar Navigation -->
-        <nav class="navbar navbar-expand-md  fixed-top">
+        <nav class="navbar navbar-expand-md fixed-top">
             <div class="container-fluid">
               <img src="https://i.postimg.cc/cJ9FMmH9/Logo.png" id="logo" alt="Bobs Electronics">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -66,13 +66,13 @@
 <!-- contact  -->
 <div class="container-form text-center">
     <h1 class="heading text-center mt-5" >Contact Me</h1>
-      <form action="https://formspree.io/f/xqkvweky" method="POST">
+      <form action="https://formspree.io/f/xqkvweky" id="contact-form" method="POST">
           <input id="input" name="name" class="bg-transparent" placeholder="Enter your name . . ." required>
           <input id="input" type="email" name="email" class="bg-transparent" placeholder="Enter your email . . . " required>
-          <textarea id="text" name="message"  cols="30" rows="10"  class="bg-transparent" placeholder="Enter your message">
+          <textarea id="text" name="message"  cols="25" rows="10"  class="bg-transparent" placeholder="Enter your message">
           </textarea>
-          <button id="submit">Submit</button>
-            <button id="clear">Clear</button>
+          <input type="submit" id="submit"></input>
+          <input type="button" value="clear" id="clear"></input>
       </form>
     
   </div>
@@ -83,19 +83,19 @@
           <!-- Section: Social media -->
           <section>
             <!-- Twitter -->
-            <a class="btn" href="https://twitter.com/daniels_niyaaz" target="_blank">
+            <a class="icon" href="https://twitter.com/daniels_niyaaz" target="_blank">
                 <i class="fab fa-twitter"></i></a>
             <!-- Linkedin -->
-            <a class="btn" href="https://www.linkedin.com/in/niyaaz-daniels-6694a7129/" target="_blank">
+            <a class="icon" href="https://www.linkedin.com/in/niyaaz-daniels-6694a7129/" target="_blank">
                 <i class="fab fa-linkedin-in"></i></a>
             <!-- Github -->
-            <a class="btn" href="https://github.com/niyaazdaniels" target="_blank">
+            <a class="icon" href="https://github.com/niyaazdaniels" target="_blank">
                 <i class="fa-brands fa-github"></i></a>
           </section>
         </div>      
         <!-- Copyright -->
         <div class="text-center">
-          © 2023 Bobs Electronics (Pty) Ltd:
+          © 2023 Bobs Electronics (Pty) Ltd | All rights reserved.  
         </div>
         <!-- Copyright -->
       </footer>

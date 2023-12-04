@@ -20,6 +20,9 @@
 #contact{
     background: linear-gradient(90deg,silver,rgb(167, 165, 163));
 }
+#admin{
+    background: linear-gradient(90deg,silver,rgb(167, 165, 163))
+}
 
 /* the logo in side nav */
 #logo-drop{
@@ -46,6 +49,12 @@ main{
     text-align: center;
     right: 2.5em;
 }
+/* icons */
+.icon{
+    cursor: pointer;
+    color: black;
+    margin-left: 10px;
+}
 
 /* contact  */
 form {
@@ -54,6 +63,11 @@ form {
     align-items: center;
     justify-content: center;
     height: 60vh;
+    border: 1px solid red;
+    padding: 20px;
+    background: linear-gradient(60deg,silver, white);
+    border: none;
+    border-radius: 40px;
 }
 /* inputs for name and email */
 #input {
@@ -77,12 +91,13 @@ form {
     background: green;
     color: #fff;
     position: relative;
-    left: -90px;
-    width: 90px;
+    left: -80px;
+    width: 70px;
     border: none;
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.6s;
+    font-size: 0.8rem;
     border-radius: 5px;
     opacity: 0.8;
     letter-spacing: 1px;
@@ -92,6 +107,7 @@ form {
   #submit:hover {
     opacity: 1;
   }
+  /* submit btn active */
   #submit:active {
     top: 6px;
     box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
@@ -100,11 +116,12 @@ form {
 /* Clear button */
   #clear {
     position: relative;
-    right: -90px;
+    right: -80px;
     top:-23px;
+    font-size: 0.8rem;
     background: red;
     color: white;
-    width: 90px;
+    width: 70px;
     border: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -114,15 +131,16 @@ form {
     letter-spacing: 1px;
     box-shadow: rgb(157, 12, 12) 0px 7px 2px, #000 0px 8px 5px;
   }
-  
+/* clear button hover */
   #clear:hover {
     opacity: 1;
   }
-  
+  /* clear button active */
   #clear:active {
-    top: 5px;
+    top: 6px;
     box-shadow: red 0px 3px 2px,#000 0px 3px 5px;
   }
+  
 /* media queries */
 @media (max-width:300px) {
     h1 {
@@ -137,6 +155,9 @@ form {
     }
     .foot-drop{
         font-size: 0.9rem;
+    }
+    form{
+        width: 285px;
     }
 }
 @media (max-width:720px) {
