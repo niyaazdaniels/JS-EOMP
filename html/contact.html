@@ -12,13 +12,93 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css">
 
-</head>
-<body>
-    <header></header>
-    <main>
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/b6c9b22527.js" crossorigin="anonymous"></script>
 
-    </main>
-    <footer></footer>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Poppins:wght@100;200;300;400;500;600&family=Sarabun:wght@200&display=swap" rel="stylesheet">
+
+
+</head>
+<body id = "contact">
+    <header>
+        <!-- SideBar Navigation -->
+        <nav class="navbar navbar-expand-md  fixed-top">
+            <div class="container-fluid">
+              <img src="https://i.postimg.cc/cJ9FMmH9/Logo.png" id="logo" alt="Bobs Electronics">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img src="https://i.postimg.cc/cJ9FMmH9/Logo.png" id="logo-drop"></h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end text-center flex-grow-2 ">
+                    <li class="nav-item">
+                      <a class="nav-link active text-white" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="/html/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="/html/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="/html/checkout.html">Checkout</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="/html/admin.html">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="/html/contact.html">Contact</a>
+                    </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+<!-- contact  -->
+<div class="container-form text-center">
+    <h1 class="heading text-center mt-5" >Contact Me</h1>
+      <form action="https://formspree.io/f/xqkvweky" method="POST">
+          <input id="input" name="name" class="bg-transparent" placeholder="Enter your name . . ." required>
+          <input id="input" type="email" name="email" class="bg-transparent" placeholder="Enter your email . . . " required>
+          <textarea id="text" name="message"  cols="30" rows="10"  class="bg-transparent" placeholder="Enter your message">
+          </textarea>
+          <button id="submit">Submit</button>
+            <button id="clear">Clear</button>
+      </form>
+    
+  </div>
+  </main>
+    <footer class="text-center fixed-bottom">
+        <!-- Grid container -->
+        <div class="container">
+          <!-- Section: Social media -->
+          <section>
+            <!-- Twitter -->
+            <a class="btn" href="https://twitter.com/daniels_niyaaz" target="_blank">
+                <i class="fab fa-twitter"></i></a>
+            <!-- Linkedin -->
+            <a class="btn" href="https://www.linkedin.com/in/niyaaz-daniels-6694a7129/" target="_blank">
+                <i class="fab fa-linkedin-in"></i></a>
+            <!-- Github -->
+            <a class="btn" href="https://github.com/niyaazdaniels" target="_blank">
+                <i class="fa-brands fa-github"></i></a>
+          </section>
+        </div>      
+        <!-- Copyright -->
+        <div class="text-center">
+          © 2023 Bobs Electronics (Pty) Ltd:
+        </div>
+        <!-- Copyright -->
+      </footer>
 
     <!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
