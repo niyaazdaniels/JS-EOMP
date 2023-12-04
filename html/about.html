@@ -5,23 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
+<!-- CSS -->
+<link rel="stylesheet" href="/css/styles.css">
+
+<!-- Icons -->
+<script src="https://kit.fontawesome.com/b6c9b22527.js" crossorigin="anonymous"></script>
+
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Poppins:wght@100;200;300;400;500;600&family=Sarabun:wght@200&display=swap" rel="stylesheet">
+
 </head>
-<body>
-    <header></header>
+<body id = "about">
+    <header>
+        <!-- SideBar Navigation -->
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <img src="https://i.postimg.cc/cJ9FMmH9/Logo.png" id="logo" alt="Bobs Electronics">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img src="https://i.postimg.cc/cJ9FMmH9/Logo.png" id="logo-drop"></h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end text-center flex-grow-2 ">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/html/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/html/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/html/checkout.html">Checkout</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/html/admin.html">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/html/contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="foot-drop text-center position-fixed">
+                    © 2023 Bobs Electronics (Pty) Ltd:
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
     <main>
-
+        <!-- About Container -->
+        <div class="container-about text-center ">
+            <!-- Heading -->
+            <h1>About Us</h1>
+            <!-- Row Container for About Content -->
+            <div class="row-about">
+                <p>Bob's Electronics PTY LTD is a company that specializes in the sale of electronic devices and components.</p>
+                <p>Founded by Bob, an enthuasiastic entreprenuer with one goal in mind, to change the retail industry, to provide
+                    a service to those who aren't able to worry with the high costs of shipping and customs. 
+                
+                we are here to serve and provide so that you no longer have to worry with how. The goal is to save society from breaking 
+                their wallets and ruining themselves financially but to save and enjoy moments like this, to look forward to a purchase, one
+                that you will enjoy.
+                With a team trained and highly skilled in the art of delivery customer service, we ensure quick and easy respone, no issues with
+                things such as shipping, returns and repairs, we guarantee a service that will last a lifetime, we ensure safety and security of both 
+                our customers products but their personal information as well. </p>
+                <p>Thank you for your ongoing support!</p>
+            </div>
+        </div>
     </main>
-    <footer></footer>
-    
+    <footer class="text-center position-fixed fixed-bottom">
+        <!--container -->
+        <div class="container">
+          <!-- Socials -->
+          <section>
+            <!-- Twitter -->
+            <a class="btn" href="https://twitter.com/daniels_niyaaz" target="_blank">
+                <i class="fab fa-twitter"></i></a>
+            <!-- Linkedin -->
+            <a class="btn" href="https://www.linkedin.com/in/niyaaz-daniels-6694a7129/" target="_blank">
+                <i class="fab fa-linkedin-in"></i></a>
+            <!-- Github -->
+            <a class="btn" href="https://github.com/niyaazdaniels" target="_blank">
+                <i class="fa-brands fa-github"></i></a>
+          </section>
+        </div>      
+        <!-- Copyright -->
+        <div class="text-center">
+          © 2023 Bobs Electronics (Pty) Ltd:    
+        </div>
+      </footer>
+   
+
     <!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="/js/about.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/js/about.js"></script>
 </body>
 </html>
