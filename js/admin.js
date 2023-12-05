@@ -11,9 +11,9 @@ function ProductsConstruction (make, url, description, price){
 // creating individual objects to be pushed into empty array created earlier
 let firstProduct = new ProductsConstruction ('HP', "https://i.postimg.cc/C1CcddPS/HP.png", "Latest gaming hardware.", 15499);
 let secondProduct = new ProductsConstruction('Apple', "https://i.postimg.cc/HL9My5gZ/iPhone.png", 'A beautiful curved design.', 29999);
-let thirdProduct = new ProductsConstruction('Sony', "https://i.postimg.cc/MHNfSm7T/PS5.png", "Powerful hardware, exclusives, and 4K.", 16999);
-let fourthProduct = new ProductsConstruction('Samsung', 'https://i.postimg.cc/SKgs4Gqh/S23U.png', "Nightography camera and powerful chip for epic gaming", 36999);
-let fifthProduct = new ProductsConstruction('Xbox',"https://i.postimg.cc/XvGSzK2q/Xbox.png", "The fastest, most powerful Xbox ever.", 13999)
+let thirdProduct = new ProductsConstruction('Sony', "https://i.postimg.cc/MHNfSm7T/PS5.png", "Powerful hardware and 4K.", 16999);
+let fourthProduct = new ProductsConstruction('Samsung', 'https://i.postimg.cc/SKgs4Gqh/S23U.png', "Powerful chip for epic gaming", 36999);
+let fifthProduct = new ProductsConstruction('Xbox',"https://i.postimg.cc/XvGSzK2q/Xbox.png", "The most powerful Xbox ever.", 13999)
 
 // push created objects into array
 products.push(firstProduct);
