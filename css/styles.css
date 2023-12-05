@@ -25,6 +25,7 @@
 }
 #products{
     background: conic-gradient( grey, silver);
+    width: 100%;
 }
 
 /* the logo in side nav */
@@ -147,9 +148,8 @@ form {
   /* Search Bar on Product page */
   /* Search Bar */
   .search {
-    display: inline-block;
     position: absolute;
-    top: 100px;
+    top: 110px;
     left: 45px;
   }
   
@@ -253,30 +253,33 @@ form {
   position: absolute;
   left: 300px;
   }
+.content{
+  width: 100px;
+  margin-left: 10px;
+}
+.content p {
+  font-size: 14px;
+  height: 50px;
+  margin-top: 20px;
+}
+.header{
+text-align: center;
+}
+.adtc{
+  font-size:11px;
+  background: green;
+  padding: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px darkgreen;
+  font-weight: bold;
+}
+#price{
+  background: green;
+  padding: 3px;
+  margin-top: 10px;
+}
 
-  .container-js-products{
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    border: 1px solid red;
-    text-align: center;
-    height: 300px;
-    padding: 10px;
-    width: 300px;
-    font-size: 12px;
-    text-align: center;
-    margin-left: 5px;
-    background: linear-gradient(90deg,silver, grey);
-    
-  }
-  button[data-cart]{
-    font-size: 10px;
-    padding: 0px;
-    border: none;
-    margin: 0;
-    background: green;
-    height: 20px;
-  }
 /* media queries */
 @media (max-width:300px) {
     h1 {
@@ -308,6 +311,12 @@ form {
    
 
     
+}
+@media(max-width:400px){
+  .products{
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (max-width:720px) {
     .container-about {
