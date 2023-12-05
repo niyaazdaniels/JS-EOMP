@@ -41,7 +41,7 @@ main{
 }
 /* about container for about page */
 .container-about{
-    height: 62vh;
+    height: 45vh;
     width: 400px;
     font-size: 14px;
 }
@@ -183,9 +183,46 @@ form {
   .search button[type="submit"]:hover {
     transform: scale(1.1);
     color: rgb(255, 255, 255);
-    background-color: rgb(63, 63, 85);
+    background: rgb(63, 63, 85);
   }
   
+  /* Admin */
+  table{
+    font-size: 10px;
+    text-align: center;
+    width: 400px;
+    position: relative;
+    top: 95px;
+    color: white;
+    background: grey;
+  }
+ .container-product{
+    display: flex;
+    flex-direction: column;
+ }
+ .edit{
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 10px;
+    background: transparent;
+ }
+ .dlt{
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 10px;
+    background: transparent;
+ }
+ table th{
+    color: black;
+    padding: 5px;
+ }
+ table td{
+    width: 130px;
+        background: linear-gradient(silver, rgb(52, 51, 51));
+   
+ }
 /* media queries */
 @media (max-width:300px) {
     h1 {
@@ -208,6 +245,13 @@ form {
         position: absolute;
         left: 5px;
     }
+   table{
+    font-size: 7px;
+    width: 280px;
+    height: 200px;
+   }
+
+    
 }
 @media (max-width:720px) {
     .container-about {
