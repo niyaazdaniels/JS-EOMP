@@ -36,7 +36,7 @@ function displayProducts(){
         return`
         <div class = "product-container">
         <table>
-        <th>ID</th>
+        <th>#</th>
         <th>Make</th>
         <th>Image</th>
         <th>Description</th>
@@ -45,7 +45,7 @@ function displayProducts(){
                 <tbody>
                 <td>${index+1}</td>
                 <td> ${product.make}: </td>
-                <td> <img src="${product.url}" alt="${product.make}" height="65px" width="78"> </td>
+                <td> <img src="${product.url}" alt="${product.make}" height="65px" width="80"> </td>
                 <td> ${product.description} </td>
                 <td> R${product.price} </td>
                 <td><button class = "edit">Edit</button></td>
@@ -78,3 +78,33 @@ function settingLocal(){
     localStorage.setItem("products",JSON.stringify(products))
    products = JSON.parse(localStorage.getItem("products"))
 }
+// add button to add extra products to the page
+function addProduct(make, image, description, price){
+    return {make, image, description, price};
+}
+let btnAdd = document.querySelector('#add')
+btnAdd.addEventListener('click', function(){
+    let make = document.querySelector('#make').value;
+    let image = document.querySelector('#image').value;
+    let description = document.querySelector('#description').value;
+    let price = parseInt(document.querySelector('#price').value);
+    
+    products.push(addProduct(make,image,description,price));  
+    
+})
+// edit button to edit buttons on the page
+function editProduct(index, make, image, description, price){
+    return {index, make, image, description, price};
+}
+
+let btnEdit = document.querySelector('.edit') // 
+btnEdit.addEventListener('click', function(){
+    let index = document.querySelector('index').value;
+    let make = document.querySelector('make').value;
+    let image = document.querySelector('image').value;
+    let description = document.querySelector('description').value;
+    let price = parseInt(document.querySelector('price').value);
+
+    products[index] = editProduct(index, make, image, description, price);  
+
+})

@@ -61,8 +61,46 @@
     </div>
   </nav>
     </header>
-    <main class="h-auto">
+    <main class="h-auto ">
 <table class="table-responsive"></table>
+<!-- Container for modal -->
+      <div class="container container-modal w-auto ">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <i class="fa-solid fa-plus"></i>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Item</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center bg-body-tertiary ">
+        <label for="">Make <br>
+          <input type="text" id="make" placeholder="Enter make of item" required>
+        </label><br>
+        <label for="">Image <br>
+          <input type="text" id="image" placeholder="Enter image url" required>
+        </label>
+        <br>
+        <label for="">Description <br>
+          <input type="text" id="description" placeholder="Enter item description" required><br>
+        </label><br>
+        <label for="">Price <br>
+          <input type="text" id="price" placeholder="Enter price" required>
+        </label>
+      </div>
+      <div class="modal-footer bg-dark ">
+        <button type="button" class="btn btn-danger w-25" data-bs-dismiss="modal"><i class="fa-solid fa-x"></i></button>
+        <button type="button" id="add" class="btn btn-success w-25 "><i class="fa-solid fa-plus"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
     </main>
     <footer class="text-center fixed-bottom">
         <!-- Grid container -->
