@@ -27,6 +27,10 @@
     background: conic-gradient( grey, silver);
     width: 100%;
 }
+/* checkout background */
+#checkout{
+  background: linear-gradient(180deg, grey, silver);
+}
 
 /* the logo in side nav */
 #logo-drop{
@@ -46,6 +50,8 @@ main{
     width: 400px;
     font-size: 14px;
 }
+
+
 /* copyright in side nav */
 .foot-drop{
     position: absolute;
@@ -145,7 +151,6 @@ form {
     box-shadow: red 0px 3px 2px,#000 0px 3px 5px;
   }
   
-  /* Search Bar on Product page */
   /* Search Bar */
   .search {
     position: absolute;
@@ -185,24 +190,17 @@ form {
     color: rgb(255, 255, 255);
     background: rgb(63, 63, 85);
   }
-  
-  /* Admin */
-  table{
-    font-size: 10px;
-    text-align: center;
-    width: 800px;
-    height: auto;
-    position: relative;
-    top: 110px;
-    letter-spacing: 1px;
-    color: white;
-    background: grey;
-  }
   /* Container that contains the products on admin page */
- .container-product{
-    display: flex;
-    flex-direction: column;
+ .products{
+    flex-direction: row;
+    flex-wrap: no wrap;
+    flex-grow: inherit;
+    position: relative;
+    top: 50px;
+    text-align: center;
+
  }
+ 
  /* edit button hover effect */
 
  .edit{
@@ -241,18 +239,14 @@ form {
   font-weight: bold;
   transition: .6s ease;
  }
- table th{
-    color: black;
-    padding: 5px;
+ #table-checkout {
+  height: 5vh;
  }
+ 
  table td{
-    width: 130px;
-    background: linear-gradient(silver, rgb(52, 51, 51));
+    width: 140px;
  }
- .container-modal{
-  position: absolute;
-  left: 300px;
-  }
+ 
 .content{
   width: 100px;
   margin-left: 10px;
@@ -273,11 +267,6 @@ text-align: center;
   cursor: pointer;
   box-shadow: 0px 5px 10px darkgreen;
   font-weight: bold;
-}
-#price{
-  background: green;
-  padding: 3px;
-  margin-top: 10px;
 }
 
 /* media queries */
@@ -303,10 +292,13 @@ text-align: center;
         left: 5px;
     }
    table{
-    font-size: 7px;
+    font-size: 7.5px;
     width: 280px;
     height: 200px;
     letter-spacing: 0;
+   }
+   .products{
+    display: flex;
    }
    
 
