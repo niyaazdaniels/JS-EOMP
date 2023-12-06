@@ -6,7 +6,7 @@
 }
 /* logo size in nav */
 #logo{
-    width: 200px;
+    width: 190px;
     height: 108px;
 }
 /* home page background */
@@ -17,12 +17,15 @@
 #about{
     background:linear-gradient(90deg,grey,silver)
 }
+/* contact page background */
 #contact{
     background: linear-gradient(90deg,silver,rgb(167, 165, 163));
 }
+/* adming page background */
 #admin{
     background: linear-gradient(90deg,silver,rgb(167, 165, 163))
 }
+/* product page background */
 #products{
     background: conic-gradient( grey, silver);
     width: 100%;
@@ -123,7 +126,7 @@ form {
     box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
   }
  
-/* Clear button */
+/* Clear button  on contact page*/
   #clear {
     position: relative;
     right: -80px;
@@ -190,18 +193,8 @@ form {
     color: rgb(255, 255, 255);
     background: rgb(63, 63, 85);
   }
-  /* Container that contains the products on admin page */
- .products{
-    flex-direction: row;
-    flex-wrap: no wrap;
-    flex-grow: inherit;
-    position: relative;
-    top: 50px;
-    text-align: center;
-
- }
  
- /* edit button hover effect */
+ /* admin edit button hover effect */
 
  .edit{
     border: none;
@@ -211,7 +204,7 @@ form {
     background: transparent;
     border-bottom: 2px solid white;
  }
- /* edit button hover effect */
+ /* admin edit button hover effect */
  .edit:hover{
   background: green;
   border-radius: 15px;
@@ -221,7 +214,7 @@ form {
   color: white;
 
  }
- /* delete button */
+ /* admin delete button */
  .dlt{
     border: none;
     outline: none;
@@ -230,7 +223,7 @@ form {
     background: transparent;
     border-bottom: 2px solid white;
  }
- /* hover effect on delete button */
+ /* admin delete hover effect on delete button */
  .dlt:hover{
   background: darkred;
   color: white;
@@ -240,9 +233,9 @@ form {
   transition: .6s ease;
  }
  #table-checkout {
-  height: 5vh;
+  height: 3vh;
  }
- 
+
  table td{
     width: 140px;
  }
@@ -269,49 +262,121 @@ text-align: center;
   font-weight: bold;
 }
 
-/* media queries */
-@media (max-width:300px) {
-    h1 {
-        position: relative;
-        text-align: center;
-    }
-    p {
-        font-size: 12px;
-    }
-    .container-about {
-        height: 55vh;
-    }
-    .foot-drop{
-        font-size: 0.9rem;
-    }
-    form{
-        width: 285px;
-    }
-    .search{
-        position: absolute;
-        left: 5px;
-    }
-   table{
-    font-size: 7.5px;
-    width: 280px;
-    height: 200px;
-    letter-spacing: 0;
-   }
-   .products{
-    display: flex;
-   }
-   
+/* product card */
+.card {
+  width: 190px;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+}
+/* product card image */
+.card-image {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 130px;
+  border-radius: 6px 6px 0 0;
+}
+/* product card image hover */
+.card-image:hover {
+  transform: scale(0.9);
+  transition: .6s ease;
+}
+/* product categy */
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+/* product card catergory hover */
+.category:hover {
+  cursor: pointer;
+}
+/* product card heading */
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+  /* product card heading hover */
+.heading:hover {
+  cursor: pointer;
+}
+/* product card author styling */
+.author {
+  color: rgb(91, 90, 90);
+  font-weight: 400;
+  font-size: 12px;
+  padding-top: 20px;
+}
+/* name styling */
+.name {
+  font-weight: 600;
+}
+/* when hovering over the name */
+.name:hover {
+  cursor: pointer;
+}
+/* sort container styling */
+.sort-container{
+  margin-top: 20px;
+}
+/* sort button styling */
+#sortBtn{
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid white;
+}
+/* styling for select brackground from sort */
+select{
+  background: grey;
+  font-size: 14px;
+  padding: 5px;
+}
+/* styling for images on product page */
+img[name='pic']{
+  height: 130px;
+  display: flex;
+}
 
-    
-}
-@media(max-width:400px){
-  .products{
-    display: flex;
-    flex-direction: column;
+  /* media queries */
+  @media (max-width:300px) {
+      h1 {
+          position: relative;
+          text-align: center;
+      }
+      p {
+          font-size: 12px;
+      }
+      .container-about {
+          height: 55vh;
+      }
+      .foot-drop{
+          font-size: 0.9rem;
+      }
+      form{
+          width: 285px;
+      }
+      .search{
+          position: absolute;
+          left: 5px;
+      }
+      table{
+       font-size: 7.5px;
+       width: 280px;
+       height: 200px;
+       letter-spacing: 0;
+     }
+     .card{
+      display: flex;
+     }
+     
+  
+      
   }
-}
-@media (max-width:720px) {
-    .container-about {
-        height: 55vh;
-    }
-}
+  @media (max-width:720px) {
+      .container-about {
+          height: 55vh;
+      }
+  }

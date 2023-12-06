@@ -1,29 +1,27 @@
+// empty array
 let newProducts = [];
 
+// declaring variable 
 let mainDisplay = document.querySelector('main')
+// fetching array while declaring variable
 let products = JSON.parse(localStorage.getItem('products'));
 
-
+// creating a function to display products from admin page
 let produce = function extraProducts(prod){
 mainDisplay.innerHTML = prod.map(function(product,index){
-return `
-<div class="products">
-<div class="header"> 
-<h5>${product.make}</h5>
-    </div>
-    <div class="item">
-        <img src="${product.url}" width= "100px" height= "90px"></img>
-    </div>
-    <div class="content">
-     <p>${product.description}</p>
-         <p>R${product.price}</p>
-    </div>
-    <div class = "button">
+return `<div class="card mt-5 me-2">
+<div class="card-image"> <img src=${product.url} name='pic'></div>
+<div class="category"> ${product.make} </div>
+<div class="heading"> ${product.description}
+    <div class="author"> R${product.price}</div>
     <p><button class = "adtc" data-add  value = "${index}">Add to Cart</button></p>
-    </div>
-    </div>
-    `
-})}
+</div>
+</div>
+</div>
+</div>`
+
+    // removing ','
+}).join('')}
     produce(products);
     
     
@@ -42,6 +40,7 @@ return `
         } else if (options === 'High to Low') {
         sortedProducts.sort((a, b) => b.price - a.price);
     }
+    // calling function produce with products array
     produce(sortedProducts);
     };
 
@@ -51,16 +50,20 @@ return `
         newProducts.push(products[index])
         localStorage.setItem("newProducts",JSON.stringify(newProducts))
     }
+    // element targeting
     mainDisplay.addEventListener('click', function(event){  
         if (event.target.hasAttribute('data-add')){
             addition(event.target.value)
         }
     })
-    
+    // spinner, if products length is equal to zero and true display spinner else function
     if(products.length===0){
-        mainDisplay.innerHTML = "" `
+        mainDisplay.innerHTML = `
         <div class="d-flex align-items-center">
-        <strong role="status">Loading...</strong>
+        <strong role="status">Loading. . .</strong>
         <div class="spinner-border ms-auto" aria-hidden="true"></div>
         </div>`
+    }  else {
+    // calling function produce with products array
+        produce(products)
     };
