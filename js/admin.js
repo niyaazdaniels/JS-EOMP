@@ -34,77 +34,44 @@ let productsDisplay = document.querySelector('table');
 function displayProducts(){
     let productsMap = products.map(function(product,index){
         return`
-        <div class = "product-container">
+        <div class = "product-container" id="admin-table">
         <table>
-        <th>#</th>
-        <th>Make</th>
-        <th>Image</th>
-        <th>Description</th>
-        <th>Price</th>
-        
                 <tbody>
                 <td>${index+1}</td>
                 <td> ${product.make}: </td>
                 <td> <img src="${product.url}" alt="${product.make}" height="65px" width="80"> </td>
                 <td> ${product.description} </td>
                 <td> R${product.price} </td>
-                <td><button class = "edit">Edit</button></td>
-                <td><button class ="dlt" value = "${index}">Delete</button></td></tbody></table>
+                <td><button type="button" class="edit btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</td>
+                <td><button class ="dlt" value = "${index}">Delete</button></td>
+                </tbody>
+                </table>
                 </div>
         `
     });
-    // remove function
-    //adding functionality for button delete
-    function removeProduct(productPosition){
-        products.splice(productPosition, 1);
-        settingLocal();
-        displayProducts();
-    }
-    // declaring the variable for the delete btn
-    let btnDelete = document.querySelector(".dlt");
-    // element targeting
-    productsDisplay.addEventListener('click', function(event){
-        if(event.target.classList.contains('dlt')){
-            removeProduct(event.target.value);
-        }
-    })
-    //displays the above in admin.HTML
-    productsDisplay.innerHTML = productsMap.join('');
+    
+//displays the above in admin.HTML
+productsDisplay.innerHTML = productsMap.join('');
 }
 // calling the function
 displayProducts();
 
+//adding functionality for button delete
+function removeProduct(productPosition){
+    products.splice(productPosition, 1);
+    settingLocal();
+    displayProducts();
+}
+// declaring the variable for the delete btn
+let btnDelete = document.querySelector(".dlt");
+// element targeting
+productsDisplay.addEventListener('click', function(event){
+    if(event.target.classList.contains('dlt')){
+        removeProduct(event.target.value);
+    }
+})
+// for the delete button to affect
 function settingLocal(){
     localStorage.setItem("products",JSON.stringify(products))
-   products = JSON.parse(localStorage.getItem("products"))
+    products = JSON.parse(localStorage.getItem("products"))
 }
-// add button to add extra products to the page
-function addProduct(make, image, description, price){
-    return {make, image, description, price};
-}
-let btnAdd = document.querySelector('#add')
-btnAdd.addEventListener('click', function(){
-    let make = document.querySelector('#make').value;
-    let image = document.querySelector('#image').value;
-    let description = document.querySelector('#description').value;
-    let price = parseInt(document.querySelector('#price').value);
-    
-    products.push(addProduct(make,image,description,price));  
-    
-})
-// edit button to edit buttons on the page
-function editProduct(index, make, image, description, price){
-    return {index, make, image, description, price};
-}
-
-let btnEdit = document.querySelector('.edit') // 
-btnEdit.addEventListener('click', function(){
-    let index = document.querySelector('index').value;
-    let make = document.querySelector('make').value;
-    let image = document.querySelector('image').value;
-    let description = document.querySelector('description').value;
-    let price = parseInt(document.querySelector('price').value);
-
-    products[index] = editProduct(index, make, image, description, price);  
-
-})
