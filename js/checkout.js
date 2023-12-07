@@ -2,7 +2,6 @@ let cartProducts = JSON.parse(localStorage.getItem("newProducts"));
 let cartItems = document.querySelector('main');
 cartItems.innerHTML = cartProducts.map(function(product,index){
     return `
-    <div>
     <table class = "table-responsive-lg " id = "table-checkout"
 <tbody>
     <td>${product.make}</td>
@@ -11,7 +10,6 @@ cartItems.innerHTML = cartProducts.map(function(product,index){
     <td>${product.description}</td>
     <td>R${product.price}</td>
     </tbody>
-    </div>
     `
 }).join('')
 
