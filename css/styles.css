@@ -339,6 +339,7 @@ table{
 table, td {
   padding: 10px 10px;
 }
+
 #clear-cart{
 position: relative;
 left: 370px;
@@ -408,6 +409,8 @@ bottom: 15.5rem;
       left: 9px;
       bottom: 15.5rem;
       }
+    
+  
     }
     @media (max-width:480px){
       #clear-cart{
@@ -424,9 +427,5 @@ bottom: 15.5rem;
         top: 50px;
         left: 4px;
       }
-      #clear-cart{
-        position: relative;
-        left: 9px;
-        bottom: 12rem;
-        }
+      
   }
