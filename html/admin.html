@@ -62,7 +62,23 @@
   </nav>
     </header>
     <main class="container-fluid admin">
-<table class="table-responsive-lg" id="admin table"></table>
+<table class="table-responsive" id="admin table">
+
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+  </tbody>
+  <tr>
+</table>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary position-absolute bottom-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id = "addProduct">
   Add Product
@@ -73,23 +89,23 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add or Edit Product</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="modal-body text-center bg-body-secondary ">
         <label for="">Make <br>
-          <input type="text" id="make" placeholder="Enter make of item" required >
+          <input type="text" id="make" placeholder="Enter make of item" value = "" required >
         </label><br>
         <label for="">Image <br>
-          <input type="text" id="image" placeholder="Enter image url" required>
+          <input type="text" id="image" placeholder="Enter image url" value = "" required>
         </label>
         <br>
         <label for="">Description <br>
-          <input type="text" id="description" placeholder="Enter item description" required><br>
+          <input type="text" id="description" placeholder="Enter item description" value = "" required><br>
         </label><br>
         <label for="">Price <br>
-          <input type="text" id="price" placeholder="Enter price" required>
+          <input type="text" id="price" placeholder="Enter price" value = "" required>
         </label>
       </div>
       </div>

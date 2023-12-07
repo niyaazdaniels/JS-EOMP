@@ -2,19 +2,20 @@
 let products = [];
 
 // created a constructor function to create products
-function ProductsConstruction (id,make, url, description, price){
+function ProductsConstruction (id,make, url, description, quantity, price){
     this.id = id,
     this.make = make,
     this.url = url,
-    this.description = description,
+    this.description = description, 
+    this.quantity = quantity, 
     this.price = price
 }
 // creating individual objects to be pushed into empty array created earlier
-let firstProduct = new ProductsConstruction (1,'HP', "https://i.postimg.cc/C1CcddPS/HP.png", "Latest gaming hardware.", 15499);
-let secondProduct = new ProductsConstruction(2,'Apple', "https://i.postimg.cc/HL9My5gZ/iPhone.png", 'A beautiful curved design.', 29999);
-let thirdProduct = new ProductsConstruction(3,'Sony', "https://i.postimg.cc/MHNfSm7T/PS5.png", "Powerful hardware and 4K.", 16999);
-let fourthProduct = new ProductsConstruction(4,'Samsung', 'https://i.postimg.cc/SKgs4Gqh/S23U.png', "Powerful chip for epic gaming", 36999);
-let fifthProduct = new ProductsConstruction(5,'Xbox',"https://i.postimg.cc/XvGSzK2q/Xbox.png", "The most powerful Xbox ever.", 13999)
+let firstProduct = new ProductsConstruction (1,'HP', "https://i.postimg.cc/C1CcddPS/HP.png", "Latest gaming hardware.",1, 15499);
+let secondProduct = new ProductsConstruction(2,'Apple', "https://i.postimg.cc/HL9My5gZ/iPhone.png", 'A beautiful curved design.',1, 29999);
+let thirdProduct = new ProductsConstruction(3,'Sony', "https://i.postimg.cc/MHNfSm7T/PS5.png", "Powerful hardware and 4K.",1, 16999);
+let fourthProduct = new ProductsConstruction(4,'Samsung', 'https://i.postimg.cc/SKgs4Gqh/S23U.png', "Powerful chip for epic gaming",1, 36999);
+let fifthProduct = new ProductsConstruction(5,'Xbox',"https://i.postimg.cc/XvGSzK2q/Xbox.png", "The most powerful Xbox ever.",1, 13999)
 
 // push created objects into array
 products.push(firstProduct);
@@ -35,16 +36,16 @@ let productsDisplay = document.querySelector('table');
 function displayProducts(){
     let productsMap = products.map(function(product,index){
         return`
-       
         <div class = "product-container" id="admin-table">
-        <table>
+            <table class = "table-responsive-lg">
                 <tbody>
                 <td>${product.id}</td>
                 <td> ${product.make}: </td>
                 <td> <img src="${product.url}" alt="${product.make}" height="65px" width="80"> </td>
                 <td> ${product.description} </td>
+                <td> ${product.quantity} </td>
                 <td> R${product.price} </td>
-                <td><button type="button" class="edit btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" ${product.index}>Edit</td>
+                <td><button type="button" class="edit" data-bs-toggle="modal" data-bs-target="#exampleModal" ${product.index}>Edit</td>
                 <td><button class ="dlt" value = "${index}">Delete</button></td>
                 </tbody>
                 </table>
@@ -55,9 +56,9 @@ function displayProducts(){
 //displays the above in admin.HTML
 productsDisplay.innerHTML = productsMap.join('');
 }
+
 // calling the function
 displayProducts();
-
 
 //adding functionality for button delete
 function removeProduct(productPosition){
@@ -82,24 +83,28 @@ function settingLocal(){
 
 // function gets values of input fields
 function addToProducts() {
-    let editMake = document.getElementById('make');
-    let editImage = document.getElementById('image');
-    let editDescription = document.getElementById('description');
-    let editPrice = document.getElementById('price');
+    let addMake = document.getElementById('make');
+    let addImage = document.getElementById('image');
+    let addDescription = document.getElementById('description');
+    let addPrice = document.getElementById('price');
 
-    // Check if the required fields are filled
-    if (!editMake.value || !editImage.value || !editDescription.value || !editPrice.value) {
+    // Checks if the required fields are filled
+    try {
+        if(!addMake.value || !addImage.value || !addDescription.value || !addPrice.value) {
       alert('Please fill all the required fields.');
       return;
-        //is price a number 
-      }  if (isNaN(editPrice.value)) {
+    } 
+    } catch (error) {
+    }
+    //is price a number and displays an alert when the value is not a number
+      if (isNaN(addPrice.value)) {
          alert('The price must be a number.');
          return;
 }
 }
 // saves updated information function// saves updated information function
 function saveProduct() {
-    // creates new object
+    // creates new object with values entered in input
     let editedProduct = {
         id: products.id + 1 ,
         make: document.getElementById('make').value,
@@ -113,8 +118,9 @@ function saveProduct() {
     localStorage.setItem('products', JSON.stringify(products));
 }
 
-// saves any and all changes
+// saves any and all changes when clicking buttton with id saveChanges
 document.getElementById('saveChanges').addEventListener('click', function () {
+    //calling functions
     addToProducts();
     saveProduct();
     displayProducts();
