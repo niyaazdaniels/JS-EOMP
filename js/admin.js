@@ -97,7 +97,7 @@ function addToProducts() {
          return;
 }
 }
-// saves updated information function
+// saves updated information function// saves updated information function
 function saveProduct() {
     // creates new object
     let editedProduct = {
@@ -112,10 +112,11 @@ function saveProduct() {
     // stores the updated array in local storage
     localStorage.setItem('products', JSON.stringify(products));
 }
+
 // saves any and all changes
-let btnAdd = document.getElementById('saveChanges').addEventListener('click', function () {
-    saveProduct();
+document.getElementById('saveChanges').addEventListener('click', function () {
     addToProducts();
+    saveProduct();
     displayProducts();
 });
 
