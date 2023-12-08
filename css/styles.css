@@ -254,11 +254,13 @@ text-align: center;
   font-weight: bold;
 }
 
+
 /* product card */
 .card {
   width: 190px;
   background: #31383f;
   padding: .4em;
+  height: 400px;
   border-radius: 6px;
 }
 /* product card image */
@@ -329,6 +331,7 @@ select{
 /* styling for images on product page */
 img[name='pic']{
   height: 130px;
+  width: 135px;
   display: flex;
 }
 table{
@@ -339,11 +342,32 @@ table{
 table, td {
   padding: 10px 10px;
 }
-
+#about-main{
+  margin-top: 100px;
+}
+#main-products{
+  margin-top: 200px;
+}
+#addProduct{
+  margin-bottom: 30px;
+}
 #clear-cart{
 position: relative;
 left: 370px;
 bottom: 15.5rem;
+}
+#checkout-main{
+  margin-top: 200px;
+}
+#clear-cart{
+  position: relative;
+  top: -80px;
+  left: 375px;
+}
+#Purchase{
+  position: relative;
+  left: 640px;
+  bottom: 10px;
 }
   /* media queries */
   @media (max-width:300px) {
@@ -366,20 +390,21 @@ bottom: 15.5rem;
       .search{
           position: absolute;
           left: 5px;
+          top: 160px;
       }
       table{
-       font-size: 7.5px;
-       width: 290px;
-       height: 200px;
-       letter-spacing: 0;
+          font-size: 7.5px;
+          width: 290px;
+          height: 190px;
+           letter-spacing: 0;
      }
      .card{
-      display: flex;  
-      font-size: 10px;
-      width: auto;
-      left: 5px;
-      top: 55px;
-      height: 200px;
+         display: flex;  
+         font-size: 10px;
+         width: auto;
+         left: 5px;
+         top: 55px;
+         height: 200px;
      }
      img[name='pic']{
       height: 40px;
@@ -404,11 +429,37 @@ bottom: 15.5rem;
     .category{
       font-size: 5px;
     }
+    #products{
+        overflow: hidden;
+      }
+    #clear-cart{
+      position: absolute;
+      top: -80px;
+    }
+    #checkout-main{
+      height: 518px;
+    }
+    #check-out{
+      height: 200px;
+    }
+    #contact-main h1{
+      font-size: 30px;
+    }
+    #about-main{
+      margin-top: 100px;
+    }
+    #addProduct{
+      position: relative;
+      left: 135px;
+    }
+    #Purchase{
+      position: relative;
+      left: 300px;
+    }
     #clear-cart{
       position: relative;
-      left: 9px;
-      bottom: 15.5rem;
-      }
+      top: 90px;
+    }
     
   
     }
@@ -416,8 +467,45 @@ bottom: 15.5rem;
       #clear-cart{
         position: relative;
         left: 9px;
-        bottom: 12rem;
+        bottom: 6rem;
         }
+        #checkout-main{
+          height: 570px;
+        }
+        #about-main{
+          margin-top: 100px;
+        }
+        #checkout-main{
+          height: 920px;
+          font-size: 1rem;
+        }
+        .card{
+          display: flex;  
+          font-size: 10px;
+          width: auto;
+          left: 5px;
+          top: 55px;
+          height: 350px;
+         }
+         #checkout{
+          width: auto;
+          position: relative;
+         }
+         #Purchase{
+          position: relative;
+          left: -100px;
+          bottom: 20px;
+          padding: 3px;
+         }
+        
+        .card-image{
+          height: 150px;
+        }
+        img[name='pic']{
+          width: 100px;
+          display: flex;
+        } 
+       
     }      
   @media (max-width:720px) {
       .container-about {
@@ -425,7 +513,58 @@ bottom: 15.5rem;
       }
       .card{
         top: 50px;
-        left: 4px;
+        left: 15px;  
       }
+      table{
+        font-size: 7.5px;
+        width: 650px;
+        height:400px;
+        position: relative;
+        top:10px;
+        letter-spacing: 0;
+      }
+      #about{
+        overflow: hidden;
+      }
+      #checkout-main{
+        height: 880px;
+      }
+      #check-out{
+        height: 500px;
+        font-size: 13px;
+      }
+      #clear-cart{
+       position: relative;
+       top: -75px;
+       left: 35px;
+       padding: 3px;
+      }
+      #contact-main{
+        height: 960px;
+      }
+      #Purchase{
+        position: relative;
+        left: 260px;
+        padding: 2px;
+        top:-20px;
       
+      }
+      #about-main{
+        margin-top: 100px;
+      }
+      img[name='pic']{
+        height: 130px;
+        width: 120px;
+        display: flex;
+      }
+      #main-products{
+        height: 900px;
+        margin-bottom: 170px;
+        position: relative;
+        right: 10px;
+      }
+
+      
+
+  
   }
